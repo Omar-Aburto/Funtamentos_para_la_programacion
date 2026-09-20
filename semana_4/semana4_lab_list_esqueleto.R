@@ -225,8 +225,12 @@ str(mi_analisis, max.level = 1)    # resumen de un nivel
 # TODO (opcional):
 sapply(regiones, function(x) mean(x$ingreso, na.rm = TRUE))
 
+# Usar la pista para obtener el vector en un solo paso
+promedio_regiones <- sapply(regiones, function(x) mean(x$ingreso, na.rm = TRUE))
 
-
+# Ver el resultado
+promedio_regiones
+sapply(, function(x)mean(ingreso, na.rm = TRUE))
 # -----------------------------------------------------------------------------
 # AUTOEVALUACIÓN antes de entregar
 # -----------------------------------------------------------------------------
