@@ -1,0 +1,61 @@
+"region","sector","educ","edad","ingreso","genero","experiencia","nivel_educ","distancia_mediana"
+"Ñuble","Agricultura",12,33,520000,"F",15,"Media completa",-139000
+"Metropolitana","Agricultura",14,20,467000,"F",0,"Superior",-192000
+"Metropolitana","Industria",13,53,NA,"M",34,"Superior",NA
+"Metropolitana","Construcción",7,46,363000,"M",33,"Sin media completa",-317500
+"Ñuble","Servicios",11,39,739000,"F",22,"Sin media completa",80000
+"Maule","Agricultura",16,42,672000,"M",20,"Superior",-8500
+"Metropolitana","Comercio",10,64,496000,"M",48,"Sin media completa",-184500
+"Araucanía","Agricultura",7,58,180000,"F",45,"Sin media completa",-479000
+"Metropolitana","Servicios",9,20,534000,"M",5,"Sin media completa",-146500
+"Ñuble","Servicios",11,42,NA,"M",25,"Sin media completa",NA
+"Maule","Servicios",12,40,781000,"F",22,"Media completa",122000
+"Ñuble","Industria",11,52,609000,"M",35,"Sin media completa",-71500
+"Araucanía","Comercio",9,61,583000,"M",46,"Sin media completa",-97500
+"Ñuble","Servicios",11,69,807000,"M",52,"Sin media completa",126500
+"Biobío","Industria",10,31,505000,"F",15,"Sin media completa",-154000
+"Araucanía","Servicios",12,26,824000,"F",8,"Media completa",165000
+"Maule","Educación",14,55,859000,"F",35,"Superior",2e+05
+"Biobío","Industria",12,23,480000,"F",5,"Media completa",-179000
+"Biobío","Educación",14,68,786000,"M",48,"Superior",105500
+"Araucanía","Construcción",11,51,659000,"F",34,"Sin media completa",0
+"Ñuble","Educación",19,61,987000,"M",36,"Superior",306500
+"Maule","Agricultura",12,45,392000,"F",27,"Media completa",-267000
+"Maule","Industria",17,50,795000,"M",27,"Superior",114500
+"Maule","Educación",14,27,934000,"M",7,"Superior",253500
+"Metropolitana","Agricultura",18,49,619000,"F",25,"Superior",-40000
+"Maule","Servicios",17,33,819000,"M",10,"Superior",138500
+"Ñuble","Educación",20,70,1093000,"F",44,"Superior",434000
+"Biobío","Servicios",13,53,840000,"F",34,"Superior",181000
+"Metropolitana","Construcción",12,52,502000,"M",34,"Media completa",-178500
+"Maule","Construcción",14,46,605000,"F",26,"Superior",-54000
+"Biobío","Servicios",15,39,909000,"M",18,"Superior",228500
+"Metropolitana","Servicios",11,22,712000,"M",5,"Sin media completa",31500
+"Ñuble","Agricultura",9,22,276000,"F",7,"Sin media completa",-383000
+"Araucanía","Servicios",15,64,848000,"M",43,"Superior",167500
+"Araucanía","Servicios",10,69,NA,"F",53,"Sin media completa",NA
+"Araucanía","Comercio",7,44,368000,"F",31,"Sin media completa",-291000
+"Ñuble","Agricultura",8,64,386000,"F",50,"Sin media completa",-273000
+"Biobío","Servicios",9,52,696000,"M",37,"Sin media completa",15500
+"Maule","Construcción",6,22,475000,"M",10,"Sin media completa",-205500
+"Metropolitana","Agricultura",17,59,609000,"M",36,"Superior",-71500
+"Ñuble","Servicios",9,44,672000,"M",29,"Sin media completa",-8500
+"Araucanía","Agricultura",14,42,497000,"M",22,"Superior",-183500
+"Araucanía","Comercio",20,62,723000,"F",36,"Superior",64000
+"Metropolitana","Educación",16,27,948000,"F",5,"Superior",289000
+"Ñuble","Industria",11,65,689000,"M",48,"Sin media completa",8500
+"Araucanía","Industria",13,21,729000,"M",2,"Superior",48500
+"Biobío","Agricultura",13,61,388000,"M",42,"Superior",-292500
+"Metropolitana","Servicios",15,57,959000,"M",36,"Superior",278500
+"Metropolitana","Industria",13,34,805000,"F",15,"Superior",146000
+"Biobío","Comercio",10,26,384000,"F",10,"Sin media completa",-275000
+"Maule","Agricultura",9,47,226000,"M",32,"Sin media completa",-454500
+"Ñuble","Agricultura",11,50,590000,"M",33,"Sin media completa",-90500
+"Ñuble","Servicios",15,36,954000,"F",15,"Superior",295000
+"Maule","Industria",13,60,NA,"M",41,"Superior",NA
+"Ñuble","Servicios",15,25,735000,"F",4,"Superior",76000
+"Biobío","Comercio",12,56,589000,"F",38,"Media completa",-70000
+"Maule","Industria",16,34,694000,"F",12,"Superior",35000
+"Ñuble","Educación",18,35,NA,"F",11,"Superior",NA
+"Biobío","Educación",15,28,755000,"F",7,"Superior",96000
+"Araucanía","Industria",17,25,975000,"M",2,"Superior",294500
