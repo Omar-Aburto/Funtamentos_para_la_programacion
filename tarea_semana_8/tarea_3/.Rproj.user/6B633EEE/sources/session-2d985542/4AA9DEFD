@@ -3,7 +3,7 @@
     "path": "~/Funtamentos_para_la_programacion/tarea_semana_8/tarea_3/scripts/tarea_t3.R",
     "project_path": "scripts/tarea_t3.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "4264886085",
     "contents": "",
     "dirty": false,
     "created": 1791941768850.0,
@@ -11,14 +11,16 @@
     "relative_order": 3,
     "properties": {
         "source_window_id": "",
-        "Source": "Source"
+        "Source": "Source",
+        "cursorPosition": "254,40",
+        "scrollLine": "241"
     },
     "folds": "",
-    "lastKnownWriteTime": 1791941768,
+    "lastKnownWriteTime": 1791946330,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1791941768,
+    "last_content_update": 1791946330394,
     "read_only": false,
     "read_only_alternatives": []
 }
