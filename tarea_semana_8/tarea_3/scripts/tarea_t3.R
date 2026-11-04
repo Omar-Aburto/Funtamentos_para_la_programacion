@@ -256,4 +256,26 @@ sensibilidad
 # sobreestimada. Segunda limitación: existe un claro sesgo por variables omitidas 
 # (por ejemplo, el número de hijos menores), por lo que la regresión solo describe 
 # asociaciones y no una causalidad.
+# =============================================================================
+# PARTE C — Comunicar
+# =============================================================================
+
+# 1. Tabla modelsummary
+modelos_ene <- list("Base" = e1_base, "Controles" = e2_controles)
+
+modelsummary(modelos_ene, 
+             stars = TRUE, 
+             gof_map = c("nobs", "r.squared"))
+
+# 2. Exportar los resultados a CSV
+# Aseguramos que la carpeta exista antes de guardar
+dir.create("data/processed", showWarnings = FALSE)
+
+# Guardamos la tabla de la ENE
+modelsummary(modelos_ene, output = "data/processed/t3_tabla_ene.csv")
+
+# Guardamos los coeficientes del modelo m2 de CASEN 
+tidy(m2, conf.int = TRUE) |>
+  write.csv("data/processed/t3_coeficientes_casen.csv", row.names = FALSE)
+
 
