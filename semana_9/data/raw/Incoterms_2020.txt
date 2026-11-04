@@ -1,0 +1,803 @@
+Comercio Exterior · Ingeniería Comercial
+Incoterms® 2020
+Reglas de la CCI para repartir obligaciones, costos y riesgos en la compraventa internacional
+Prof. Norberto Hernández Andrade
+Semana 11 · Unidad RA6
+Abra con la pregunta: ¿alguien ha comprado algo por internet desde el extranjero y tuvo que pagar el envío o los impuestos al recibirlo? Eso es, en pequeño, lo que regulan los Incoterms.
+1
+
+Lo que lograremos hoy
+1
+Explicar qué son los Incoterms, qué regulan y qué no
+2
+Distinguir las 11 reglas por grupo (E, F, C, D) y por modo de transporte
+3
+Identificar dónde se traspasa el riesgo y quién paga cada tramo
+4
+Aplicar las reglas para elegir el Incoterm adecuado en casos de exportación desde Ñuble
+Agenda de la sesión
+10'
+Dilema inicial
+35'
+Concepto y las 11 reglas
+10'
+Errores frecuentes
+50'
+Actividad: ¿qué Incoterm usarías?
+15'
+Plenario y ticket de salida
+2
+Los tiempos suman 120 minutos. Si la clase es de 90 minutos, acorte la revisión de reglas a las láminas de matriz y deje las fichas individuales como material de estudio.
+2
+
+Dilema inicial
+Un contenedor de arándanos de Bulnes cae al mar mientras la grúa lo sube al buque en el Puerto de San Vicente.
+¿Quién asume la pérdida: el exportador chileno o el importador holandés?
+Si se vendió FOB…
+Respuesta oculta: revélela al final
+Si se vendió FCA terminal…
+Respuesta oculta: revélela al final
+Si se vendió CIF…
+Respuesta oculta: revélela al final
+Pida a cada estudiante que vote con la mano (vendedor / comprador) antes de explicar. No revele las respuestas aún: vuelva a este dilema al terminar FOB y FCA.Respuestas: FOB → pierde el VENDEDOR (el riesgo pasa cuando la mercancía está a bordo; aún no lo estaba). FCA terminal → pierde el COMPRADOR (el riesgo pasó al entregar al transportista en el terminal). CIF → pierde el VENDEDOR (en CIF el riesgo también pasa a bordo; el seguro que contrató es a favor del comprador desde ese punto).Mensaje: el mismo accidente tiene distinto responsable según el Incoterm pactado.
+3
+
+¿Qué son los Incoterms®?
+Reglas internacionales publicadas por la Cámara de Comercio Internacional (CCI / ICC) que definen, con tres letras, cómo se reparten las obligaciones, los costos y los riesgos de la entrega de mercancías entre vendedor y comprador.
+11
+reglas vigentes
+3
+letras por regla
+2020
+versión vigente (desde el 1 de enero de 2020)
+Para qué sirven
+Evitan malentendidos entre partes de distintos países
+Definen el punto exacto de entrega
+Permiten comparar cotizaciones
+Son voluntarios: rigen solo si se incorporan al contrato
+1936
+1953
+1967
+1976
+1980
+1990
+2000
+2010
+2020
+Ediciones de los Incoterms: se revisan aproximadamente cada 10 años
+4
+Remarque que los Incoterms no son ley: son reglas privadas de la CCI que tienen fuerza solo cuando el contrato las cita, indicando la versión. Por eso es posible encontrar contratos que todavía usan Incoterms 2010.
+4
+
+¿Qué regulan los Incoterms?
+Obligaciones
+Quién hace qué: contratar el transporte y el seguro, entregar documentos y realizar los trámites aduaneros.
+Riesgos
+En qué lugar y momento el riesgo de pérdida o daño pasa del vendedor al comprador (punto de entrega).
+Costos
+Quién paga cada tramo: carga, transporte, terminales, seguro, despacho de exportación e importación.
+Todo gira en torno al punto de entrega: ahí se cumple la obligación del vendedor y se traspasa el riesgo.
+5
+5
+
+Lo que los Incoterms NO regulan
+La existencia del contrato de compraventa
+Las especificaciones de la mercancía
+La transferencia de la propiedad o título
+El precio y la forma de pago
+Las consecuencias del incumplimiento del contrato
+Prohibiciones de exportar o importar y sanciones
+El monto de aranceles e impuestos
+Los derechos de propiedad intelectual
+Estos temas se resuelven en el contrato de compraventa, la ley aplicable (ej. Convención de Viena de 1980) y el medio de pago pactado.
+6
+Error frecuente en certámenes: decir que el Incoterm define cuándo el comprador pasa a ser dueño de la mercancía. No lo hace: la propiedad la define el contrato y la ley aplicable.
+6
+
+¿Quién usa los Incoterms y en qué documentos?
+Quién
+Exportadores
+Importadores
+Transportistas
+Agentes de aduana
+Compañías de seguros
+Bancos
+En qué documentos
+Oferta comercial y cotización — aclara qué incluye el precio
+Orden de compra — fija las expectativas de entrega
+Factura proforma — informa los términos antes de vender
+Factura comercial — base del valor aduanero
+Contrato de compraventa — obligaciones y riesgos de las partes
+DUS / declaración de importación — cláusula de venta ante Aduana
+Carta de crédito — condiciona los documentos exigidos
+7
+Conecte con lo visto en semanas 6-9: en una carta de crédito, el Incoterm determina qué documentos exige el banco (por ejemplo, en CIF se exige la póliza de seguro; en FOB, no). En Chile, el DUS de exportación registra la cláusula de venta.
+7
+
+Las 11 reglas Incoterms® 2020
+Dos grupos según el modo de transporte y cuatro familias según hasta dónde llega la obligación del vendedor
+8
+8
+
+Dos grupos según el modo de transporte
+Cualquier modo de transporte (incluido multimodal)
+EXW
+FCA
+CPT
+CIP
+DAP
+DPU
+DDP
+Recomendadas para carga en contenedor y transporte aéreo o terrestre
+Solo transporte marítimo y vías navegables interiores
+FAS
+FOB
+CFR
+CIF
+Para carga a granel o no contenedorizada que se entrega directamente al buque
+Equivalencias
+FCA ↔ FOB
+CPT ↔ CFR
+CIP ↔ CIF
+Novedades 2020
+DAT desaparece y nace DPU
+CIP exige seguro amplio ICC (A); CIF sigue con ICC (C)
+FCA admite B/L con anotación «a bordo»
+Se permite transporte propio en FCA, DAP, DPU y DDP
+Se asignan los costos de seguridad (security)
+9
+Corrección respecto de la versión anterior del material: en Incoterms 2020 ya no existe DAT; su lugar lo ocupa DPU (destacado en naranjo).
+9
+
+Cuatro familias: la obligación del vendedor crece de E a D
+Más obligaciones, costos y riesgos para el vendedor →
+E
+Salida
+El vendedor pone la mercancía a disposición en su local.
+EXW
+F
+Transporte principal NO pagado
+El vendedor entrega al transportista que contrata el comprador.
+FCA · FAS · FOB
+C
+Transporte principal pagado
+El vendedor paga el flete, pero el riesgo pasa en origen.
+CPT · CIP · CFR · CIF
+D
+Llegada
+El vendedor asume costos y riesgos hasta el destino.
+DAP · DPU · DDP
+10
+Regla mnemotécnica: E de Exit (sale de fábrica), F de Free (libre del flete principal), C de Cost (paga el costo del flete), D de Delivered (entregado en destino).
+10
+
+Matriz de responsabilidades: quién paga cada tramo
+Regla
+Carga en origen
+Transporte interno
+Aduana export.
+Terminal origen
+Flete principal
+Seguro
+Terminal destino
+Aduana import.
+Transporte destino
+Descarga final
+El riesgo pasa…
+EXW
+C
+C
+C
+C
+C
+C*
+C
+C
+C
+C
+A disposición en local del vendedor
+FCA
+V
+V
+V
+C
+C
+C*
+C
+C
+C
+C
+Entrega al transportista del comprador
+FAS
+V
+V
+V
+C
+C
+C*
+C
+C
+C
+C
+Al costado del buque
+FOB
+V
+V
+V
+V
+C
+C*
+C
+C
+C
+C
+A bordo del buque en origen
+CFR
+V
+V
+V
+V
+V
+C*
+C
+C
+C
+C
+A bordo del buque en origen
+CIF
+V
+V
+V
+V
+V
+V
+C
+C
+C
+C
+A bordo del buque en origen
+CPT
+V
+V
+V
+V
+V
+C*
+C
+C
+C
+C
+Entrega al primer transportista
+CIP
+V
+V
+V
+V
+V
+V
+C
+C
+C
+C
+Entrega al primer transportista
+DAP
+V
+V
+V
+V
+V
+V*
+V
+C
+V
+C
+En destino, lista para descargar
+DPU
+V
+V
+V
+V
+V
+V*
+V
+C
+V
+V
+En destino, ya descargada
+DDP
+V
+V
+V
+V
+V
+V*
+V
+V
+V
+C
+En destino, importada, lista para descargar
+V = vendedor   C = comprador   * = no obligatorio; lo asume quien soporta el riesgo.   Supuestos: FCA en terminal de origen; D en bodega del comprador; CPT/CIP con retiro en planta del vendedor.
+11
+Esta matriz es la referencia para la actividad de casos «¿Qué Incoterm usarías?».Observe el patrón: la columna de color naranjo (vendedor) se extiende hacia la derecha a medida que bajamos de E a D.
+11
+
+EXW · En Fábrica
+Ex Works  ·  Cualquier modo de transporte  ·  Grupo E
+EXW
+Entrega y riesgo
+La mercancía queda a disposición del comprador en el local del vendedor (u otro lugar convenido), sin cargar y sin despacho de exportación.
+Vendedor
+Preparar y embalar la mercancía
+Ponerla a disposición en el lugar y fecha pactados
+Entregar la información que el comprador necesite
+Comprador
+Cargar la mercancía en su vehículo
+Despacho de exportación e importación
+Todo el transporte, el seguro y el riesgo
+Reparto de costos por tramo y punto de traspaso del riesgo (línea roja)
+Carga en origen
+C
+Transporte interno
+C
+Aduana export.
+C
+Terminal origen
+C
+Flete principal
+C
+Seguro
+C*
+Terminal destino
+C
+Aduana import.
+C
+Transporte destino
+C
+Descarga final
+C
+Clave: Mínima obligación para el vendedor. En exportaciones desde Chile conviene FCA: un comprador extranjero difícilmente puede tramitar el despacho de exportación ante Aduana.
+12
+Ejemplo de redacción correcta: EXW Planta Berries Bulnes, Bulnes, Chile – Incoterms® 2020
+12
+
+FCA · Franco Porteador
+Free Carrier  ·  Cualquier modo de transporte  ·  Grupo F
+FCA
+Entrega y riesgo
+En el local del vendedor: cargada en el vehículo del comprador. En otro lugar (ej. terminal): lista para descargar, a disposición del transportista del comprador.
+Vendedor
+Despacho de exportación
+Entregar al transportista designado por el comprador
+Cargar la mercancía si la entrega es en su local
+Comprador
+Contratar y pagar el transporte principal
+Seguro (opcional)
+Despacho de importación y derechos
+Reparto de costos por tramo y punto de traspaso del riesgo (línea roja)
+Carga en origen
+V
+Transporte interno
+V
+Aduana export.
+V
+Terminal origen
+C
+Flete principal
+C
+Seguro
+C*
+Terminal destino
+C
+Aduana import.
+C
+Transporte destino
+C
+Descarga final
+C
+Clave: Regla recomendada por la CCI para carga en contenedor. Novedad 2020: se puede pactar que el transportista emita al vendedor un B/L con anotación «a bordo» (útil con carta de crédito).
+13
+Ejemplo de redacción correcta: FCA Terminal Puerto de San Vicente, Talcahuano, Chile – Incoterms® 2020
+13
+
+FAS · Franco al Costado del Buque
+Free Alongside Ship  ·  Solo transporte marítimo  ·  Grupo F
+FAS
+Entrega y riesgo
+Al costado del buque designado por el comprador (en el muelle o en una barcaza), en el puerto de embarque convenido.
+Vendedor
+Llevar la mercancía al costado del buque
+Despacho de exportación
+Asumir el riesgo hasta el costado del buque
+Comprador
+Carga a bordo, flete marítimo y seguro
+Riesgo desde que la carga está al costado
+Despacho de importación
+Reparto de costos por tramo y punto de traspaso del riesgo (línea roja)
+Carga en origen
+V
+Transporte interno
+V
+Aduana export.
+V
+Terminal origen
+C
+Flete principal
+C
+Seguro
+C*
+Terminal destino
+C
+Aduana import.
+C
+Transporte destino
+C
+Descarga final
+C
+Clave: Pensado para carga a granel o sobredimensionada (celulosa, madera, maquinaria). No sirve para contenedores, que se entregan en el terminal antes de llegar al costado.
+14
+Ejemplo de redacción correcta: FAS Puerto de Lirquén, Penco, Chile – Incoterms® 2020
+14
+
+FOB · Franco a Bordo
+Free On Board  ·  Solo transporte marítimo  ·  Grupo F
+FOB
+Entrega y riesgo
+A bordo del buque designado por el comprador, en el puerto de embarque convenido.
+Vendedor
+Transporte hasta el puerto y carga a bordo
+Despacho de exportación
+Riesgo hasta que la mercancía está a bordo
+Comprador
+Contratar y pagar el flete marítimo
+Seguro (opcional)
+Descarga, importación y transporte en destino
+Reparto de costos por tramo y punto de traspaso del riesgo (línea roja)
+Carga en origen
+V
+Transporte interno
+V
+Aduana export.
+V
+Terminal origen
+V
+Flete principal
+C
+Seguro
+C*
+Terminal destino
+C
+Aduana import.
+C
+Transporte destino
+C
+Descarga final
+C
+Clave: Muy usado en Chile, pero para contenedores la CCI recomienda FCA: el contenedor se entrega en el terminal días antes del embarque y el vendedor queda expuesto a un riesgo que no controla.
+15
+Ejemplo de redacción correcta: FOB Puerto de San Vicente, Talcahuano, Chile – Incoterms® 2020
+15
+
+CFR · Costo y Flete
+Cost and Freight  ·  Solo transporte marítimo  ·  Grupo C
+CFR
+Entrega y riesgo
+A bordo del buque en el puerto de embarque. El riesgo pasa ahí, aunque el vendedor paga el flete hasta el puerto de destino.
+Vendedor
+Contratar y pagar el flete hasta el puerto de destino
+Carga a bordo y despacho de exportación
+Entregar el documento de transporte
+Comprador
+Riesgo durante todo el viaje marítimo
+Seguro (opcional, pero recomendable)
+Descarga no incluida en el flete e importación
+Reparto de costos por tramo y punto de traspaso del riesgo (línea roja)
+Carga en origen
+V
+Transporte interno
+V
+Aduana export.
+V
+Terminal origen
+V
+Flete principal
+V
+Seguro
+C*
+Terminal destino
+C
+Aduana import.
+C
+Transporte destino
+C
+Descarga final
+C
+Clave: Las reglas C tienen dos puntos críticos: el riesgo pasa en origen (a bordo), pero el vendedor paga el flete hasta destino. CFR no incluye seguro.
+16
+Ejemplo de redacción correcta: CFR Puerto de Shanghái, China – Incoterms® 2020Corrección: CFR significa Costo y Flete (Cost and Freight). No incluye seguro; el seguro aparece en CIF.
+16
+
+CIF · Costo, Seguro y Flete
+Cost, Insurance and Freight  ·  Solo transporte marítimo  ·  Grupo C
+CIF
+Entrega y riesgo
+A bordo del buque en el puerto de embarque. El vendedor paga flete y seguro hasta el puerto de destino.
+Vendedor
+Flete hasta el puerto de destino
+Seguro a favor del comprador: mínimo ICC (C), 110 % del valor
+Carga a bordo y despacho de exportación
+Comprador
+Riesgo desde que la mercancía está a bordo
+Cobrar al seguro si hay siniestro
+Descarga, importación y transporte en destino
+Reparto de costos por tramo y punto de traspaso del riesgo (línea roja)
+Carga en origen
+V
+Transporte interno
+V
+Aduana export.
+V
+Terminal origen
+V
+Flete principal
+V
+Seguro
+V
+Terminal destino
+C
+Aduana import.
+C
+Transporte destino
+C
+Descarga final
+C
+Clave: El vendedor contrata el seguro, pero quien soporta el riesgo en el viaje es el comprador. La cobertura mínima es ICC (C); si el comprador quiere más, debe pactarlo.
+17
+Ejemplo de redacción correcta: CIF Puerto de Rotterdam, Países Bajos – Incoterms® 2020
+17
+
+CPT · Transporte Pagado Hasta
+Carriage Paid To  ·  Cualquier modo de transporte  ·  Grupo C
+CPT
+Entrega y riesgo
+Al primer transportista contratado por el vendedor, en el lugar convenido en origen. El vendedor paga el transporte hasta el lugar de destino.
+Vendedor
+Contratar y pagar el transporte hasta destino
+Entregar al primer transportista
+Despacho de exportación
+Comprador
+Riesgo desde la entrega al primer transportista
+Seguro (opcional)
+Despacho de importación y derechos
+Reparto de costos por tramo y punto de traspaso del riesgo (línea roja)
+Carga en origen
+V
+Transporte interno
+V
+Aduana export.
+V
+Terminal origen
+V
+Flete principal
+V
+Seguro
+C*
+Terminal destino
+C
+Aduana import.
+C
+Transporte destino
+C
+Descarga final
+C
+Clave: Versión multimodal de CFR. Si el primer transportista retira la carga en la planta del vendedor, el riesgo pasa al comprador ahí mismo, aunque el flete lo pague el vendedor.
+18
+Ejemplo de redacción correcta: CPT Almacén del importador, Shanghái, China – Incoterms® 2020Corrección respecto de la versión anterior: CPT es multimodal; el transporte se paga hasta el LUGAR de destino (no solo un puerto) y no implica carga y estiba en buque.
+18
+
+CIP · Transporte y Seguro Pagados Hasta
+Carriage and Insurance Paid To  ·  Cualquier modo de transporte  ·  Grupo C
+CIP
+Entrega y riesgo
+Al primer transportista contratado por el vendedor. El vendedor paga transporte y seguro hasta el lugar de destino.
+Vendedor
+Transporte hasta el lugar de destino
+Seguro a favor del comprador: mínimo ICC (A), 110 % del valor
+Despacho de exportación
+Comprador
+Riesgo desde la entrega al primer transportista
+Despacho de importación y derechos
+Descarga, si no la cubre el contrato de transporte
+Reparto de costos por tramo y punto de traspaso del riesgo (línea roja)
+Carga en origen
+V
+Transporte interno
+V
+Aduana export.
+V
+Terminal origen
+V
+Flete principal
+V
+Seguro
+V
+Terminal destino
+C
+Aduana import.
+C
+Transporte destino
+C
+Descarga final
+C
+Clave: Novedad 2020: CIP exige cobertura amplia ICC (A), mientras CIF mantiene la mínima ICC (C). Es la alternativa a CIF que recomienda la CCI para contenedores.
+19
+Ejemplo de redacción correcta: CIP Centro de distribución, Rotterdam, Países Bajos – Incoterms® 2020Recuerde: la diferencia de cobertura CIP (A) vs. CIF (C) es pregunta clásica de certamen.
+19
+
+DAP · Entregada en Lugar
+Delivered at Place  ·  Cualquier modo de transporte  ·  Grupo D
+DAP
+Entrega y riesgo
+En el lugar de destino convenido, sobre el medio de transporte y lista para ser descargada. El riesgo pasa en ese momento.
+Vendedor
+Transporte hasta el lugar de destino
+Todos los riesgos hasta la llegada
+Despacho de exportación
+Comprador
+Descargar la mercancía
+Despacho de importación, derechos e impuestos
+Riesgo desde la llegada, lista para descarga
+Reparto de costos por tramo y punto de traspaso del riesgo (línea roja)
+Carga en origen
+V
+Transporte interno
+V
+Aduana export.
+V
+Terminal origen
+V
+Flete principal
+V
+Seguro
+V*
+Terminal destino
+V
+Aduana import.
+C
+Transporte destino
+V
+Descarga final
+C
+Clave: Es el VENDEDOR quien asume el transporte y el riesgo hasta el destino; el comprador solo descarga e importa. Si el lugar es una bodega, se indica la dirección precisa.
+20
+Ejemplo de redacción correcta: DAP Bodega NordFrost, Rotterdam, Países Bajos – Incoterms® 2020Corrección: en DAP es el VENDEDOR quien entrega en el lugar convenido sin descargar; la versión anterior atribuía esa obligación al comprador.
+20
+
+DPU · Entregada en Lugar Descargada
+Delivered at Place Unloaded  ·  Cualquier modo de transporte  ·  Grupo D
+DPU
+Entrega y riesgo
+En el lugar de destino convenido, una vez descargada del medio de transporte.
+Vendedor
+Transporte hasta el lugar de destino
+Descargar en el lugar convenido
+Riesgo hasta que la carga está descargada
+Comprador
+Despacho de importación
+Derechos e impuestos de importación
+Transporte posterior a la entrega
+Reparto de costos por tramo y punto de traspaso del riesgo (línea roja)
+Carga en origen
+V
+Transporte interno
+V
+Aduana export.
+V
+Terminal origen
+V
+Flete principal
+V
+Seguro
+V*
+Terminal destino
+V
+Aduana import.
+C
+Transporte destino
+V
+Descarga final
+V
+Clave: Reemplaza a DAT (Incoterms 2010) y ya no se limita a terminales. Es la única regla en que el vendedor debe descargar: verifique que pueda hacerlo en destino.
+21
+Ejemplo de redacción correcta: DPU Terminal de contenedores, Rotterdam, Países Bajos – Incoterms® 2020
+21
+
+DDP · Entregada Derechos Pagados
+Delivered Duty Paid  ·  Cualquier modo de transporte  ·  Grupo D
+DDP
+Entrega y riesgo
+En el lugar de destino, despachada para importación, sobre el medio de transporte y lista para descargar.
+Vendedor
+Transporte y riesgo hasta el destino
+Despacho de exportación e importación
+Derechos, IVA y otros impuestos de importación
+Comprador
+Descargar la mercancía
+Pagar el precio y recibir la mercancía
+Colaborar con información para la importación
+Reparto de costos por tramo y punto de traspaso del riesgo (línea roja)
+Carga en origen
+V
+Transporte interno
+V
+Aduana export.
+V
+Terminal origen
+V
+Flete principal
+V
+Seguro
+V*
+Terminal destino
+V
+Aduana import.
+V
+Transporte destino
+V
+Descarga final
+C
+Clave: Máxima obligación para el vendedor. Antes de pactarla, confirme que el exportador puede actuar como importador y pagar los impuestos (IVA) en el país de destino.
+22
+Ejemplo de redacción correcta: DDP Bodega del cliente, Nueva York, EE. UU. – Incoterms® 2020
+22
+
+Cinco errores frecuentes al usar Incoterms
+1
+Usar FOB o CIF para contenedores
+Use FCA, CPT o CIP: el contenedor se entrega en el terminal, no a bordo.
+2
+Creer que en las reglas C el riesgo viaja con el vendedor
+En CPT, CIP, CFR y CIF el riesgo pasa en origen, aunque el vendedor pague el flete.
+3
+Vender EXW a un comprador extranjero
+No podrá hacer el despacho de exportación en Chile: prefiera FCA.
+4
+Pactar DDP sin poder importar en destino
+El vendedor debe pagar IVA y derechos en otro país: evalúelo antes.
+5
+Omitir el lugar preciso o la versión
+«FOB Chile» es ambiguo: indique puerto exacto y «Incoterms® 2020».
+23
+23
+
+Recomendación de la CCI: cómo escribir un Incoterm
+Regla
+FOB
+Lugar o puerto preciso
+Puerto de San Vicente, Talcahuano, Chile
+Versión
+Incoterms® 2020
+Incorrecto
+Correcto
+FOB Chile
+CIF Holanda, Incoterms
+DAT Rotterdam 2020
+FCA Planta Berries Bulnes, Bulnes, Chile – Incoterms® 2020
+CIP Centro de distribución, Rotterdam, Países Bajos – Incoterms® 2020
+FAS Muelle 2, Puerto de Lirquén, Chile – Incoterms® 2020
+24
+«DAT Rotterdam 2020» es incorrecto porque DAT no existe en Incoterms 2020: hoy sería DPU. «CIF Holanda» no indica puerto ni versión.
+24
+
+Síntesis y ticket de salida
+Para recordar
+El Incoterm define dónde se entrega, quién paga cada tramo y dónde pasa el riesgo.
+En las reglas C el vendedor paga el flete, pero el riesgo pasa en origen.
+Contenedor: FCA, CPT o CIP. Granel: FAS, FOB, CFR o CIF.
+Volvamos al dilema inicial: ¿quién pierde el contenedor caído en San Vicente bajo FOB, FCA y CIF?
+Ticket de salida (individual, 5 minutos)
+¿En qué momento exacto se traspasa el riesgo en FOB y en CPT?
+¿Por qué la CCI recomienda FCA en lugar de FOB para carga en contenedor?
+Redacte correctamente un Incoterm para exportar vino desde Portezuelo a Shanghái.
+25
+Respuestas esperadas: (1) FOB: cuando la mercancía está a bordo del buque en el puerto de embarque; CPT: al entregarla al primer transportista. (2) Porque el contenedor se entrega en el terminal antes de cargarse y, con FOB, el vendedor seguiría soportando un riesgo que ya no controla. (3) Ej.: «FCA Terminal Puerto de San Antonio, Chile – Incoterms® 2020» o «CIP Almacén del importador, Shanghái, China – Incoterms® 2020».
+25
