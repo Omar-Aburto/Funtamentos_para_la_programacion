@@ -1,0 +1,28 @@
+# Tarea 4: Portafolio de Análisis Socioeconómico y Laboral
+
+**Autor:** Omar Aburto
+**Curso:** Fundamentos de Programación para Análisis Económico
+
+Este repositorio contiene la resolución de la Tarea 4, enfocada en el análisis exploratorio y visualización de microdatos de la encuesta CASEN y la Encuesta Nacional de Empleo (ENE - Trimestre MJJ). 
+
+**Estructura del Proyecto**
+* `data/raw/`: Contiene los conjuntos de datos originales (`casen_reducido.csv`, `ene-2026-06-mjj.csv`, `salario_minimo_chile.csv`).
+* `scripts/`: 
+  * `t4_parte1.R`: Análisis de ingresos, educación, salario mínimo real vs. nominal, y categorías ocupacionales.
+  * `t4_parte2.R`: Composición de la figura final con `patchwork`, analizando informalidad regional (foco en Ñuble), brechas de género y jornadas laborales.
+* `outputs/`: Gráficos exportados, incluyendo la figura compuesta final.
+
+**Reproducibilidad**
+Los scripts están diseñados para ejecutarse de principio a fin de manera secuencial. Asegúrese de que el directorio de trabajo (Working Directory) esté configurado en la raíz del proyecto para que las rutas relativas a la carpeta `data/` funcionen correctamente. Las dependencias principales son `ggplot2`, `dplyr`, `tidyr`, `scales`, `ggrepel` y `patchwork`.
+### Reflexión Final
+
+Al evaluar el portafolio, considero que el **Gráfico 2** (barras de informalidad regional) es el que mejor comunica su hallazgo. Como vimos en la teoría, en un gráfico de barras "la longitud es el dato", lo que permite al ojo humano comparar magnitudes con alta precisión y sin esfuerzo. Al mantener el eje desde cero y ordenar las categorías, el gráfico es honesto y evita cualquier ilusión óptica. Además, cumple con el principio de que el color debe tener una función: el uso del dorado resalta de inmediato a Ñuble frente al gris del resto del país, separando el mensaje principal de cualquier chart junk decorativo.
+
+Para el **Gráfico 3** (distribución de horas), elegí utilizar una curva de densidad (`geom_density`) en lugar de un diagrama de cajas (`geom_boxplot`). La lección del Cuarteto de Anscombe y el Datasaurus Dozen nos enseñó que las métricas de tendencia central resumen los datos, pero el gráfico los revela. Un boxplot se habría limitado a dibujar la mediana y los cuartiles, ocultando la distribución multimodal. La densidad, en cambio, visibiliza con exactitud los enormes picos en las jornadas legales de 40 y 45 horas, demostrando una realidad estructural del mercado laboral chileno que la caja habría promediado.
+
+Finalmente, ensamblar los paneles en una **figura compuesta** entrega un valor analítico superior. Los gráficos por separado son fragmentos, pero unidos construyen una "radiografía" completa y secuencial (problema territorial, estructura de jornadas y brechas de género). Esta integración permite aprovechar la codificación de colores de forma transversal: el lector aprende que el azul y el dorado representan los mismos conceptos en todos los paneles, comunicando un diagnóstico macro del mercado laboral de manera limpia, sin redundancias ni el sesgo de aislar la información.
+## Declaración de autoría y uso de IA
+- Herramienta utilizada: Gemini
+- Para qué la usé: Consultar sintaxis de ggplot2, resolver errores de entorno (falta de paquete quantreg, panel de RStudio pequeño) y calibrar la redacción técnica de la reflexión.
+- Qué hice yo: Seleccioné las geometrías (densidad vs boxplot), definí el enfoque del Gráfico 5, analicé los resultados económicos e integré la composición final en patchwork.
+- Verificación: confirmo que entiendo y puedo explicar todo lo que entrego.
