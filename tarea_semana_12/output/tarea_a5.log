@@ -1,0 +1,207 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\omara\OneDrive\Documentos\Funtamentos_para_la_programacion\tarea_semana_12\output/tarea_a5.log
+  log type:  text
+ opened on:  17 Nov 2026, 11:19:38
+
+. 
+. 
+. * --- 2. Carga e inspección inicial de los datos (S12S1, Bloque E1 / S12S2, Bloque A) ---
+. import delimited "data/raw/casen_reducido.csv", clear varnames(1) encoding("utf-8")
+(6 vars, 60 obs)
+
+. describe
+
+Contains data
+  obs:            60                          
+ vars:             6                          
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+              storage   display    value
+variable name   type    format     label      variable label
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+region          str13   %13s                  
+sector          str13   %13s                  
+educ            byte    %8.0g                 
+edad            byte    %8.0g                 
+ingreso         long    %12.0g                
+genero          str1    %9s                   
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+. summarize
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      region |          0
+      sector |          0
+        educ |         60    12.73333    3.328697          6         20
+        edad |         60    44.51667    15.15959         20         70
+     ingreso |         55    655290.9    209912.4     180000    1093000
+-------------+---------------------------------------------------------
+      genero |          0
+
+. 
+. 
+. * --- 3. Creación y modificación de variables (S12S2, Bloque C) ---
+. * Experiencia potencial de Mincer: se crea y luego se corrigen posibles negativos con replace
+. generate experiencia = edad - educ - 6
+
+. replace  experiencia = 0 if experiencia < 0
+(0 real changes made)
+
+. 
+. * Variable indicadora de género (1 si es mujer, 0 si es hombre)
+. generate mujer = (genero == "F")
+
+. 
+. * Variable indicadora de alta educación (13 o más años), respetando missing si existieran
+. generate alta_educ = (educ >= 13) if !missing(educ)
+
+. 
+. 
+. * --- 4. Etiquetas de variables y valores (S12S2, Bloque E) ---
+. label variable experiencia "Experiencia potencial (años)"
+
+. label variable mujer       "Indicadora de género (1 = Mujer)"
+
+. label variable alta_educ   "Educación superior (13+ años)"
+
+. 
+. * Etiquetamos los valores de la indicadora mujer
+. label define mujer_lbl 0 "Hombre" 1 "Mujer"
+
+. label values mujer mujer_lbl
+
+. 
+. * Convertimos sector (texto) en categórica numérica etiquetada (recomendado S12S2)
+. encode sector, generate(sector_n)
+
+. 
+. 
+. * --- 5. Manejo y explicación de valores faltantes / missing (S12S2, Bloque B) ---
+. count if missing(ingreso)
+  5
+
+. count if ingreso > 500000
+  46
+
+. count if ingreso > 500000 & !missing(ingreso)
+  41
+
+. 
+. /*
+>    EXPLICACIÓN SOBRE MISSING EN STATA:
+>    El comando summarize excluye automáticamente los valores faltantes (.) al calcular
+>    estadísticos como la media o el máximo (por eso reporta Obs = 55 de un total de 60).
+>    En cambio, al filtrar con expresiones lógicas como "ingreso > 500000", Stata trata
+>    internamente al punto (.) como un valor numérico mayor que cualquier número real.
+>    Por ello, si no se añade "& !missing(ingreso)", Stata cuenta erróneamente a las 5
+>    personas sin dato de ingreso dentro del grupo con ingresos superiores a $500.000.
+> */
+. 
+. 
+. * --- 6. Estadísticos descriptivos (S12S2, Bloques F y F2) ---
+. * Resumen de variables numéricas principales
+. summarize ingreso educ edad experiencia
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+     ingreso |         55    655290.9    209912.4     180000    1093000
+        educ |         60    12.73333    3.328697          6         20
+        edad |         60    44.51667    15.15959         20         70
+ experiencia |         60    25.78333     15.3182          0         53
+
+. 
+. * Frecuencias de variables categóricas
+. tabulate sector_n
+
+    sector_n |      Freq.     Percent        Cum.
+-------------+-----------------------------------
+ Agricultura |         13       21.67       21.67
+    Comercio |          6       10.00       31.67
+Construcción |          5        8.33       40.00
+   Educación |          8       13.33       53.33
+   Industria |         11       18.33       71.67
+   Servicios |         17       28.33      100.00
+-------------+-----------------------------------
+       Total |         60      100.00
+
+. 
+. * Tabla cruzada con porcentajes por fila (educación superior según género)
+. tabulate mujer alta_educ, row
+
++----------------+
+| Key            |
+|----------------|
+|   frequency    |
+| row percentage |
++----------------+
+
+Indicadora |
+ de género |  Educación superior
+      (1 = |      (13+ años)
+    Mujer) |         0          1 |     Total
+-----------+----------------------+----------
+    Hombre |        15         16 |        31 
+           |     48.39      51.61 |    100.00 
+-----------+----------------------+----------
+     Mujer |        15         14 |        29 
+           |     51.72      48.28 |    100.00 
+-----------+----------------------+----------
+     Total |        30         30 |        60 
+           |     50.00      50.00 |    100.00 
+
+. 
+. * Resumen de ingreso por sector económico usando tabstat
+. tabstat ingreso, by(sector_n) stat(mean sd n)
+
+Summary for variables: ingreso
+     by categories of: sector_n 
+
+    sector_n |      mean        sd         N
+-------------+------------------------------
+ Agricultura |  447846.2  156716.2        13
+    Comercio |  523833.3  135666.4         6
+Construcción |    520800  115694.4         5
+   Educación |  908857.1  117920.1         7
+   Industria |  697888.9  154652.4         9
+   Servicios |    788600  112702.4        15
+-------------+------------------------------
+       Total |  655290.9  209912.4        55
+--------------------------------------------
+
+. 
+. * Correlación entre ingreso, educación y experiencia (usa observaciones completas)
+. correlate ingreso educ experiencia
+(obs=55)
+
+             |  ingreso     educ experi~a
+-------------+---------------------------
+     ingreso |   1.0000
+        educ |   0.6767   1.0000
+ experiencia |  -0.0875  -0.1171   1.0000
+
+
+. 
+. * Guardamos la media de ingreso en un scalar antes de que r() sea sobrescrito
+. summarize ingreso
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+     ingreso |         55    655290.9    209912.4     180000    1093000
+
+. scalar media_ingreso = r(mean)
+
+. display "Ingreso mensual promedio de la muestra: $" %9.0fc media_ingreso
+Ingreso mensual promedio de la muestra: $  655,291
+
+. 
+. 
+. * --- 7. Cierre de bitácora e interpretación ---
+. log close
+      name:  <unnamed>
+       log:  C:\Users\omara\OneDrive\Documentos\Funtamentos_para_la_programacion\tarea_semana_12\output/tarea_a5.log
+  log type:  text
+ closed on:  17 Nov 2026, 11:19:38
+--------------------------------------------------------------------------------------------------------------------------------------------------------
