@@ -1,0 +1,195 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\omara\OneDrive\Documentos\Funtamentos_para_la_programacion\proyecto_final\output/verificacion_datos.log
+  log type:  text
+ opened on:  17 Nov 2026, 21:19:58
+
+. 
+. *------------------------------------------------------------------------------
+. * 1. Apertura de la base y tamaño muestral
+. *------------------------------------------------------------------------------
+. use "data/raw/casen_2024.dta", clear
+(Encuesta Casen 2024)
+
+. describe, short
+
+Contains data from data/raw/casen_2024.dta
+  obs:       218,367                          Encuesta Casen 2024
+ vars:           877                          2 Jan 2026 17:20
+Sorted by: id_vivienda  folio  id_persona
+
+. count                                                              // total nacional
+  218,367
+
+. count if region == 16                                              // Ñuble
+  9,392
+
+. count if region == 16 & activ == 1 & inrange(edad, 25, 64)         // ocupados 25-64
+  3,259
+
+. 
+. *------------------------------------------------------------------------------
+. * 2. Confirmación de variables clave
+. *------------------------------------------------------------------------------
+. describe yoprcor e6a e6c_completo esc edad sexo area expr
+
+              storage   display    value
+variable name   type    format     label      variable label
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+yoprcor         long    %12.0f                Ingreso ocupación principal corregido
+e6a             byte    %66.0g     e6a        e6a. ¿Cuál es el nivel educacional al que asiste o el más alto al cual asistió?
+e6c_completo    byte    %6.0f      e6c_completo
+                                              e6c_completo. ¿Completó el nivel anteriormente declarado?
+esc             byte    %9.0g                 Años de escolaridad (edad >= 15)
+edad            int     %6.0f                 Edad
+sexo            byte    %9.0f      sexo       Sexo
+area            byte    %10.0g     zona       Área
+expr            int     %10.0g                Factor de expansión regional
+
+. 
+. tab e6a         if region == 16 & activ == 1 & inrange(edad, 25, 64)
+
+  e6a. ¿Cuál es el nivel educacional al |
+       que asiste o el más alto al cual |
+                               asistió? |      Freq.     Percent        Cum.
+----------------------------------------+-----------------------------------
+                       1. Nunca asistió |         12        0.37        0.37
+    5. Educación Especial (Diferencial) |          2        0.06        0.43
+6. Primaria o Preparatoria (Sistema ant |          1        0.03        0.46
+                    7. Educación Básica |        578       17.74       18.20
+       8. Humanidades (Sistema Antiguo) |          2        0.06       18.26
+9. Educación Media Científico-Humanista |      1,064       32.65       50.91
+10. Técnica, Comercial, Industrial o No |          5        0.15       51.06
+11. Educación Media Técnica Profesional |        395       12.12       63.18
+12. Técnico Nivel Superior (Carreras 1  |        388       11.91       75.08
+13. Profesional (Carreras 4 o más años) |        739       22.68       97.76
+                14. Magíster o maestría |         61        1.87       99.63
+                          15. Doctorado |         12        0.37      100.00
+----------------------------------------+-----------------------------------
+                                  Total |      3,259      100.00
+
+. tab e6c_completo if region == 16 & activ == 1 & inrange(edad, 25, 64)
+
+e6c_complet |
+         o. |
+  ¿Completó |
+   el nivel |
+anteriormen |
+         te |
+ declarado? |      Freq.     Percent        Cum.
+------------+-----------------------------------
+      1. Sí |        999       88.64       88.64
+      2. No |        128       11.36      100.00
+------------+-----------------------------------
+      Total |      1,127      100.00
+
+. tab sexo area   if region == 16 & activ == 1 & inrange(edad, 25, 64)
+
+           |         Área
+      Sexo |    Urbano      Rural |     Total
+-----------+----------------------+----------
+    Hombre |     1,229        547 |     1,776 
+     Mujer |     1,150        333 |     1,483 
+-----------+----------------------+----------
+     Total |     2,379        880 |     3,259 
+
+. 
+. *------------------------------------------------------------------------------
+. * 3. Ingreso de la ocupación principal: Ñuble vs. país (ponderado por expr)
+. *------------------------------------------------------------------------------
+. summarize yoprcor [aw=expr] if activ == 1 & inrange(edad, 25, 64)                      // país
+
+    Variable |     Obs      Weight        Mean   Std. Dev.       Min        Max
+-------------+-----------------------------------------------------------------
+     yoprcor |  79,614     8107733    898892.8     920803       5000   2.00e+07
+
+. summarize yoprcor [aw=expr] if region == 16 & activ == 1 & inrange(edad, 25, 64)       // Ñuble
+
+    Variable |     Obs      Weight        Mean   Std. Dev.       Min        Max
+-------------+-----------------------------------------------------------------
+     yoprcor |   3,119      185094    677390.3   602959.3       8000    7000000
+
+. 
+. *------------------------------------------------------------------------------
+. * 4. Definición de los grupos educativos
+. *------------------------------------------------------------------------------
+. tab e6a e6c_completo if region == 16 & activ == 1 & inrange(edad, 25, 64), missing
+
+     e6a. ¿Cuál es el |
+ nivel educacional al |
+  que asiste o el más |    e6c_completo. ¿Completó el
+         alto al cual |  nivel anteriormente declarado?
+             asistió? |     1. Sí      2. No          . |     Total
+----------------------+---------------------------------+----------
+     1. Nunca asistió |         0          0         12 |        12 
+5. Educación Especial |         0          0          2 |         2 
+6. Primaria o Prepara |         0          0          1 |         1 
+  7. Educación Básica |         0          0        578 |       578 
+8. Humanidades (Siste |         0          0          2 |         2 
+9. Educación Media Ci |         0          0      1,064 |     1,064 
+10. Técnica, Comercia |         0          0          5 |         5 
+11. Educación Media T |         0          0        395 |       395 
+12. Técnico Nivel Sup |       319         51         18 |       388 
+13. Profesional (Carr |       626         75         38 |       739 
+14. Magíster o maestr |        48          1         12 |        61 
+        15. Doctorado |         6          1          5 |        12 
+----------------------+---------------------------------+----------
+                Total |       999        128      2,132 |     3,259 
+
+. tab esc if e6a == 9  & region == 16 & activ == 1 & inrange(edad, 25, 64)   // media científico-humanista
+
+    Años de |
+escolaridad |
+   (edad >= |
+        15) |      Freq.     Percent        Cum.
+------------+-----------------------------------
+          9 |         58        5.46        5.46
+         10 |        108       10.17       15.63
+         11 |         55        5.18       20.81
+         12 |        841       79.19      100.00
+------------+-----------------------------------
+      Total |      1,062      100.00
+
+. tab esc if e6a == 11 & region == 16 & activ == 1 & inrange(edad, 25, 64)   // media técnico-profesional
+
+    Años de |
+escolaridad |
+   (edad >= |
+        15) |      Freq.     Percent        Cum.
+------------+-----------------------------------
+          9 |         10        2.54        2.54
+         10 |         15        3.81        6.35
+         11 |         22        5.58       11.93
+         12 |        277       70.30       82.23
+         13 |         70       17.77      100.00
+------------+-----------------------------------
+      Total |        394      100.00
+
+. 
+. *------------------------------------------------------------------------------
+. * 5. Distribución del ingreso (para decidir la regla de limpieza)
+. *------------------------------------------------------------------------------
+. summarize yoprcor [aw=expr] if region == 16 & activ == 1 & inrange(edad, 25, 64), detail
+
+           Ingreso ocupación principal corregido
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%        50000           8000
+ 5%       130000          10000
+10%       200000          10000       Obs               3,119
+25%       400000          15000       Sum of Wgt.     185,094
+
+50%       500000                      Mean           677390.3
+                        Largest       Std. Dev.      602959.3
+75%       800000        6000000
+90%      1200000        6000000       Variance       3.64e+11
+95%      1700000        6000000       Skewness       4.021391
+99%      3000000        7000000       Kurtosis       28.13807
+
+. 
+. log close
+      name:  <unnamed>
+       log:  C:\Users\omara\OneDrive\Documentos\Funtamentos_para_la_programacion\proyecto_final\output/verificacion_datos.log
+  log type:  text
+ closed on:  17 Nov 2026, 21:20:04
+--------------------------------------------------------------------------------------------------------------------------------------------------------

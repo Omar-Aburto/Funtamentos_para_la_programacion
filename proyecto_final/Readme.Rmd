@@ -1,0 +1,58 @@
+# Retorno salarial de la educación técnica y profesional en Ñuble
+
+Proyecto Final · Fundamentos de Programación para Análisis Económico
+
+## Equipo
+- Luis Omar Aburto
+- Damian Ignacio Correa
+
+## Pregunta de investigación
+¿Cuánto más ganan al mes, en pesos, los ocupados de 25 a 64 años de la Región de Ñuble con título técnico de nivel superior y con título profesional (4 o más años), respecto de quienes completaron solo la enseñanza media?
+
+## Fuente de datos
+- **Encuesta:** Encuesta de Caracterización Socioeconómica Nacional (CASEN) 2024, Ministerio de Desarrollo Social y Familia.
+- **Enlace:** https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen-2024
+- **Fecha de descarga:** 16/11/2026
+- **Formato:** .dta (Stata)
+- **Archivo:** `data/raw/casen_2024.dta` (datos originales, nunca se editan)
+
+### Muestra
+- Unidad de observación: personas ocupadas (`activ == 1`) de 25 a 64 años en la Región de Ñuble (`region == 16`).
+- 218.367 personas en la base nacional; 9.392 en Ñuble; 3.259 ocupados de 25 a 64 años; 3.119 con ingreso válido.
+- Factor de expansión regional: `expr`.
+
+### Variables principales
+`yoprcor` (ingreso de la ocupación principal corregido), `e6a` y `e6c_completo` (nivel educacional y completitud), `esc` (años de escolaridad), `edad`, `sexo`, `area`, `region`, `activ`, `expr`.
+
+### Grupos educativos
+| Grupo | Regla |
+|---|---|
+| Media completa (referencia) | `e6a` en {9, 11} y `esc >= 12` |
+| Técnico de nivel superior | `e6a == 12` y `e6c_completo == 1` |
+| Profesional (4 o más años) | `e6a == 13` y `e6c_completo == 1` |
+
+El resto de los niveles queda fuera del análisis principal.
+
+```
+
+## Plan de trabajo y reparto R / Stata (provisional)
+| Script | Herramienta | Qué hace | Por qué |
+|---|---|---|---|
+| `01_limpiar.do` | Stata | Filtra Ñuble, ocupados de 25 a 64 años, construye los grupos educativos, trata faltantes y valores atípicos con criterio documentado, guarda `data/processed/casen_nuble.dta` | _(completar: razón propia del equipo)_ |
+| `02_modelar.do` | Stata | Estima las regresiones ponderadas por `expr`, con bucles para sexo y zona, y exporta tablas y coeficientes 
+| `03_describir_y_graficar.R` | R | Lee los datos limpios y los coeficientes exportados, calcula descriptivos ponderados y genera las figuras 
+
+## Modelo (provicional)
+`ingreso = b0 + b1·Técnico + b2·Profesional + b3·experiencia + b4·experiencia² + b5·Mujer + b6·Rural + error`
+
+
+## Cómo reproducir
+1. Clonar el repositorio.
+2. Descargar la base CASEN 2024 desde el enlace de arriba y dejarla en `data/raw/casen_2024.dta`.
+
+## Declaración de autoría humana y uso de ia
+- Integrantes y responsabilidades: _(Oma Aburto y Damian Correa)_
+- Herramienta(s) de IA utilizada(s): _(Cloude)_
+- Para qué se usaron: _(revisa que el archivo adjunto cumpla con la pauta del hito 1)_
+- Qué hizo el equipo: _(descargo la base de datos y reviso su contenido con stata y R)_
+- Verificación: confirmamos que entendemos y podemos explicar todo lo que entregamos, incluido cada línea de código.
