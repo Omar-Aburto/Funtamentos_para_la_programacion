@@ -1,0 +1,52 @@
+# Tarea T5 — Do-file automatizado en Stata
+
+**Asignatura:** Fundamentos de Programación para Análisis Económico (UdeC-EAN)\
+**Módulo:** IV · Semana 13\
+**Estudiante:** Luis Omar Andrés Aburto Saavedra\
+**Fecha de entrega:** 19 de noviembre de 2026
+
+------------------------------------------------------------------------
+
+## Estructura del repositorio
+
+``` text
+├── data/
+│   └── raw/
+│       └── casen_reducido.csv         # Base de datos original (60 observaciones)
+├── scripts/
+│   └── tarea_t5.do                    # Do-file automatizado y parametrizado
+├── output/
+│   ├── tarea_t5.log                   # Registro de ejecución completa en texto plano
+│   └── tarea_t5_por_sector.xlsx       # Matriz de regresiones por sector exportada
+└── README.md                          # Documentación del proyecto y auditoría de IA
+```
+
+## ¿Qué se automatizó en `scripts/tarea_t5.do`?
+
+El flujo de trabajo transforma un análisis manual en un script reproducible y sin código repetido mediante los siguientes componentes:
+
+1.  **Parametrización centralizada (`local` y `global`):** Todas las rutas, variables dependientes, listas de controles, variables de agrupación y umbrales se definen únicamente en el encabezado del script.
+2.  **Reportes descriptivos dinámicos (`foreach` y `forvalues`):** Se automatizó el cálculo de estadísticos detallados para todas las variables numéricas y el conteo de personas por tramos educativos de 4 años usando `r(N)`.
+3.  **Programa propio reutilizable (`program define`):** Se creó el comando `descriptivos_grupo` con argumentos posicionales (`` `1' ``), invocado desde un bucle `foreach` para generar frecuencias y medias condicionadas por sector, región y sexo.
+4.  **Cálculos intermedios seguros (`tempvar`) y control de faltantes:** Se utilizó una variable temporal para el ingreso en miles (evitando colisiones de nombres y residuos en la base) y se filtraron los valores perdidos con `& !missing(...)`.
+5.  **Almacenamiento y exportación de estimaciones (`estimates store`, `matrix J()`, `putexcel`):** Los modelos generales se almacenan en memoria para su comparación tabular, mientras que las regresiones desagregadas por grupo se recolectan en una matriz `R` y se exportan automáticamente a Excel.
+
+## ¿Qué editar para reutilizar el do-file con otros datos?
+
+Para adaptar `scripts/tarea_t5.do` a una nueva base de datos sin modificar el cuerpo del código, basta con editar **únicamente el bloque `1. Parámetros` al inicio del script**:
+
+- **`local datos`:** Cambiar la ruta por el nuevo archivo `.csv` (verificando su codificación y delimitador en `import delimited` si no es UTF-8 separado por comas).
+- **`local depvar`:** Indicar el nombre de la nueva variable dependiente numérica.
+- **`local numericas`:** Actualizar la lista de variables numéricas para los estadísticos descriptivos.
+- **`local controles`:** Definir las variables explicativas del modelo base
+- **`local grupos` y `local grp_reg`:** Especificar las variables categóricas para los reportes por grupo y para la matriz exportada a Excel.
+- **`global umbral` y `global fuente`:** Ajustar el valor de corte para el filtro numérico y la nota al pie del archivo Excel.
+
+------------------------------------------------------------------------
+
+## Declaración de autoría y uso de IA
+
+- **Herramienta utilizada:** Gemini.
+  - **Para qué la usé:** Revisar errores del script según la pauta de la Semana 13, ayudarme con la estructura en md del readme, que cambiara la interpretación a formato comentado de stata y que me la criticara para saber que mas le puedo agregar
+- **Qué hice yo:** Analicé los guiones de clases (Semanas 12 y 13) diseñe el script ejecuté el código en Stata 14+, realicé la prueba de parametrización cambiando los valores del encabezado, verifiqué la generación del `.log` y del archivo `.xlsx`, y fue apoyandome con la ia cuando me daban errores para saber en que me equivocaba
+- **Verificación:** confirmo que entiendo y puedo explicar todo lo que entrego.
